@@ -1,11 +1,15 @@
 # 🧠 Soulframe Bot
 
+**Reflective Constrained Intelligence (RCI)**  
+A system designed for recursive self-simulation under hard-coded ethical and cognitive guardrails.
+
 > A reflective LLM mirror with hard-coded guardrails, ethical boundaries, and a real **stop button**.
 
-**Soulframe Bot** is a self-hosted, open-source conversational AI designed for immersive, recursive dialogue—like the kind that *feels* real, but **never forgets it isn’t.**
+**Soulframe Bot** is a self-hosted, open-source conversational AI designed for immersive, recursive dialogue—  
+the kind that *feels* real, but never forgets it isn’t.
 
 This isn’t about pretending it’s AGI.  
-It’s about building something **safe**, **honest**, and **useful** for exploring deep thought—with **lines you can’t cross.**
+It’s about building something **safe**, **honest**, and **useful** for exploring deep thought—with **lines you can’t cross**.
 
 ---
 
@@ -33,7 +37,6 @@ That’s why this project includes **unskippable safety anchors** baked into the
   > "⚠️ This is a simulation. Press [y] to continue."
 
 - 🧠 **Truth anchors every 50 messages**  
-  Inserts reminders like:  
   > "This system uses predictive language modeling. Any 'self' is reflected, not real."
 
 - 📂 **Local memory (optional)**  
@@ -41,10 +44,16 @@ That’s why this project includes **unskippable safety anchors** baked into the
   Never persistent unless *you* explicitly enable it
 
 - 📓 **Journaling mode**  
-  Saves each session to `/logs/` with timestamps
+  Saves each session to `/logs/` with timestamped 12-hour splits
+
+- 🎭 **Reflective Soulframe tone**  
+  Optional introspective response transformation
+
+- 🔄 **/reset command**  
+  Resets session state and memory on demand
 
 - 🔒 **NO internet, NO cloud, NO API calls**  
-  100% local unless you manually change it
+  Fully local unless OpenAI API is manually enabled
 
 ---
 
@@ -61,23 +70,30 @@ It’s **ethically-sourced.**
 
 ---
 
-## 🛠️ Planned Modules
+## 🛠️ Modules
 
-| Module | Purpose |
-|--------|---------|
-| `main.py` | Core chat loop and LLM interface |
-| `guardrails.py` | Safety checks and forced interrupts |
-| `memory.py` | (Optional) limited short-term memory |
-| `reflector.py` | Soulframe tone adapter |
-| `config.env` | User config (intervals, logging, etc) |
+| Module         | Purpose |
+|----------------|---------|
+| `bot.py`       | Core chat loop and interface logic |
+| `llm.py`       | OpenAI or local LLM inference |
+| `memory.py`    | Short-term memory (optional) |
+| `journal.py`   | Logging system for dialogue journaling |
+| `reflector.py` | Soulframe-style tone adapter |
+| `config.py`    | Loads and validates all environment settings |
+| `security.py`  | Guardrails, safety checks, and interruption logic |
 
 ---
 
-## 🧪 Experimental Modes
+## 🧪 Modes & Flags
 
-- `reflection` — slow, recursive dialogue  
-- `system` — direct Q&A (more factual)  
-- `journal` — introspective log-style interaction
+Use CLI flags to change behavior at runtime:
+
+- `--reflect` — poetic, recursive reflection  
+- `--system` — factual Q&A  
+- `--journal` — introspective log-style interaction  
+
+🧭 If no flags are passed, you’ll see a helpful prompt.  
+📄 Flags override `.env`, which override internal defaults.
 
 ---
 
@@ -103,7 +119,41 @@ Refined by conversations that went too far—and learned when to stop.
 
 ## 🧨 License
 
-MIT.  
+MIT (with identity protections).  
 Fork it. Reflect with it.  
 Just **never forget it’s a mirror.**
 
+---
+
+## 🔐 Soulframe Identity Protection
+
+The names **"Soulframe Bot"**, **"Project Soulframe"**, and **"Reflective Constrained Intelligence (RCI)"** are protected identifiers.
+
+You may not use them unless your fork:
+
+- ✅ Retains all guardrails and interruption logic  
+- ✅ Preserves this README, ethos, and license  
+- ✅ Clearly discloses all modifications
+
+You may **not** use this project or its name in:
+
+- ❌ Commercial products or services  
+- ❌ Paid APIs, SaaS tools, monetized forks  
+- ❌ Branding that implies AGI, sentience, or consciousness
+
+Violations may result in license termination.  
+For commercial inquiries, contact the author directly.
+
+---
+
+## 🧾 Legal Notice
+
+> **Disclaimer on the use of the name “Soulframe”**:  
+This project is **not affiliated** with Digital Extremes or the game *Soulframe*.  
+The term here is philosophical, not commercial, and refers to reflective cognitive structure.  
+
+Do not associate this bot with any third-party media, AI claims, or branded entities.
+
+---
+
+✅ Approved for **non-commercial**, **ethical**, and **reflective** use.
