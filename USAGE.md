@@ -18,7 +18,7 @@ This guide walks you through installing and running Soulframe Bot in **offline**
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/soulframe-bot.git
+git clone https://github.com/mineblow/Project-Soulframe.git
 cd soulframe-bot
 ```
 
